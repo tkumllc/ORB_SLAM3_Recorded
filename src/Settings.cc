@@ -105,6 +105,30 @@ namespace ORB_SLAM3 {
     }
 
     template<>
+    bool Settings::readParameter<bool>(cv::FileStorage& fSettings, const std::string& name, bool& found, const bool required){
+        cv::FileNode node = fSettings[name];
+        if(node.empty()){
+            if(required){
+                std::cerr << name << " required parameter does not exist, aborting..." << std::endl;
+                exit(-1);
+            }
+            else{
+                std::cerr << name << " optional parameter does not exist..." << std::endl;
+                found = false;
+                return false;
+            }
+        }
+        else if(!node.isInt()){
+            std::cerr << name << " parameter must be a boolean (0 or 1), aborting..." << std::endl;
+            exit(-1);
+        }
+        else{
+            found = true;
+            return (bool) node.operator int();
+        }
+    }
+
+    template<>
     cv::Mat Settings::readParameter<cv::Mat>(cv::FileStorage& fSettings, const std::string& name, bool& found, const bool required){
         cv::FileNode node = fSettings[name];
         if(node.empty()){
@@ -467,6 +491,10 @@ namespace ORB_SLAM3 {
 
          if(!found)
             imageViewerScale_ = 1.0f;
+
+        pangolinPreview_ = readParameter<bool>(fSettings,"Pangolin.Preview",found,false);
+        if(!found)
+            pangolinPreview_ = true; // Default to true for backward compatibility
     }
 
     void Settings::readLoadAndSave(cv::FileStorage &fSettings) {

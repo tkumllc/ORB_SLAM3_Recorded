@@ -67,5 +67,5 @@ Viewer.ViewpointF: 500.0
 # Pangolin Parameters  
 #--------------------------------------------------------------------------------------------
 # Pangolin preview display control (true: show preview, false: hide preview)
-Pangolin.Preview: 1
-
+# Setting this to 0 (false) will disable the Pangolin viewer window
+Pangolin.Preview: 0

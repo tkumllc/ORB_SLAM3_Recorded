@@ -226,7 +226,13 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
     //usleep(10*1000*1000);
 
     //Initialize the Viewer thread and launch
-    if(bUseViewer)
+    bool useViewer = bUseViewer;
+    if(settings_) {
+        // Use YAML setting if available, otherwise fall back to parameter
+        useViewer = settings_->pangolinPreview();
+    }
+    
+    if(useViewer)
     //if(false) // TODO
     {
         mpViewer = new Viewer(this, mpFrameDrawer,mpMapDrawer,mpTracker,strSettingsFile,settings_);
