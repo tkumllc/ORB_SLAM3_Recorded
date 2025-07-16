@@ -64,5 +64,5 @@ Viewer.ViewpointZ: -1.8
 Viewer.ViewpointF: 500.0
 
 # Viewer display control (1: show viewer, 0: hide viewer)
-Viewer.UseViewer: 1
-
+# Setting this to 0 will disable the viewer window
+Viewer.UseViewer: 0

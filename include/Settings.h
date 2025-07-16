@@ -117,6 +117,8 @@ namespace ORB_SLAM3 {
 
         float thFarPoints() {return thFarPoints_;}
 
+        bool useViewer() {return useViewer_;}
+
         cv::Mat M1l() {return M1l_;}
         cv::Mat M2l() {return M2l_;}
         cv::Mat M1r() {return M1r_;}
@@ -217,6 +219,7 @@ namespace ORB_SLAM3 {
         float cameraLineWidth_;
         float viewPointX_, viewPointY_, viewPointZ_, viewPointF_;
         float imageViewerScale_;
+        bool useViewer_;
 
         /*
          * Save & load maps
