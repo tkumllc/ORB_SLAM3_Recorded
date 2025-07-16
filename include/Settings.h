@@ -117,7 +117,7 @@ namespace ORB_SLAM3 {
 
         float thFarPoints() {return thFarPoints_;}
 
-        bool pangolinPreview() {return pangolinPreview_;}
+        bool useViewer() {return useViewer_;}
 
         cv::Mat M1l() {return M1l_;}
         cv::Mat M2l() {return M2l_;}
@@ -219,7 +219,7 @@ namespace ORB_SLAM3 {
         float cameraLineWidth_;
         float viewPointX_, viewPointY_, viewPointZ_, viewPointF_;
         float imageViewerScale_;
-        bool pangolinPreview_;
+        bool useViewer_;
 
         /*
          * Save & load maps

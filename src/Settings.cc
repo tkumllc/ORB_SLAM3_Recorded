@@ -492,9 +492,9 @@ namespace ORB_SLAM3 {
          if(!found)
             imageViewerScale_ = 1.0f;
 
-        pangolinPreview_ = readParameter<bool>(fSettings,"Viewer.UseViewer",found,false);
+        useViewer_ = readParameter<bool>(fSettings,"Viewer.UseViewer",found,false);
         if(!found)
-            pangolinPreview_ = true; // Default to true for backward compatibility
+            useViewer_ = true; // Default to true for backward compatibility
     }
 
     void Settings::readLoadAndSave(cv::FileStorage &fSettings) {
