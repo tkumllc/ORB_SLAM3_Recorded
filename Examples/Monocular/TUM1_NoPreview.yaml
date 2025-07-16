@@ -63,9 +63,6 @@ Viewer.ViewpointY: -0.7
 Viewer.ViewpointZ: -1.8
 Viewer.ViewpointF: 500.0
 
-#--------------------------------------------------------------------------------------------
-# Pangolin Parameters  
-#--------------------------------------------------------------------------------------------
-# Pangolin preview display control (true: show preview, false: hide preview)
-# Setting this to 0 (false) will disable the Pangolin viewer window
-Pangolin.Preview: 0
+# Viewer display control (1: show viewer, 0: hide viewer)
+# Setting this to 0 will disable the viewer window
+Viewer.UseViewer: 0
