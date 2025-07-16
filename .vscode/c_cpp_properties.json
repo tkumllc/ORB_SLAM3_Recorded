@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/Thirdparty/DBoW2/include",
+                "${workspaceFolder}/Thirdparty/g2o/include",
+                "${workspaceFolder}/Thirdparty/Sophus/include",
+                "/usr/include/eigen3",
+                "/usr/include/opencv4",
+                "/usr/include/opencv4/opencv2",
+                "/usr/local/include",
+                "/usr/include",
+                "/usr/include/c++/9",
+                "/usr/include/x86_64-linux-gnu/c++/9",
+                "/opt/ros/noetic/include"
+            ],
+            "defines": [
+                "COMPILEDWITHC11"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

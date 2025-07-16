@@ -7,6 +7,12 @@
 # Unignore all dirs
 !*/
 
+# Unignore devcontainer and vscode configs
+!.devcontainer/
+!.devcontainer/*
+!.vscode/
+!.vscode/*
+
 CMakeLists.txt.user
 CMakeLists_modified.txt
 
@@ -91,3 +97,5 @@ my_settings.txt
 borrar/*
 
 */ExecMean.txt
+
+Datasets/*

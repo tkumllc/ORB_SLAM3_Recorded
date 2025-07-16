@@ -1,0 +1,28 @@
+{
+    "C_Cpp.default.cppStandard": "c++11",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/Thirdparty/DBoW2/include",
+        "${workspaceFolder}/Thirdparty/g2o/include",
+        "${workspaceFolder}/Thirdparty/Sophus/include",
+        "/usr/include/eigen3",
+        "/usr/include/opencv4",
+        "/usr/local/include"
+    ],
+    "C_Cpp.default.defines": [
+        "COMPILEDWITHC11"
+    ],
+    "cmake.configureOnOpen": true,
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "files.associations": {
+        "*.cc": "cpp",
+        "*.h": "cpp"
+    },
+    "terminal.integrated.env.linux": {
+        "ROS_PACKAGE_PATH": "${env:ROS_PACKAGE_PATH}:${workspaceFolder}/Examples/ROS",
+        "DISPLAY": "${env:DISPLAY}"
+    }
+}
